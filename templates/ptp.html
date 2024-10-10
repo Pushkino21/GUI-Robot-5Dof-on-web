@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Robot 5dof</title>
+    <link rel="stylesheet" href={{url_for("static",filename="css/styles.css")}} type="text/css">
+    <script>
+    // Copy values from hidden fields to visible inputs
+    document.addEventListener('DOMContentLoaded', function() {
+        var th1_hidden = document.getElementById('th1_hidden').value;
+        var th2_hidden = document.getElementById('th2_hidden').value;
+        var th3_hidden = document.getElementById('th3_hidden').value;
+        var th4_hidden = document.getElementById('th4_hidden').value;
+        var th5_hidden = document.getElementById('th5_hidden').value;
+        var pinza_hidden = document.getElementById('pinza_hidden').value;
+
+        var th1f_hidden = document.getElementById('th1f_hidden').value;
+        var th2f_hidden = document.getElementById('th2f_hidden').value;
+        var th3f_hidden = document.getElementById('th3f_hidden').value;
+        var th4f_hidden = document.getElementById('th4f_hidden').value;
+        var th5f_hidden = document.getElementById('th5f_hidden').value;
+        var pinzaf_hidden = document.getElementById('pinzaf_hidden').value;
+
+        document.getElementById('q1').value = th1_hidden;
+        document.getElementById('q2').value = th2_hidden;
+        document.getElementById('q3').value = th3_hidden;
+        document.getElementById('q4').value = th4_hidden;
+        document.getElementById('q5').value = th5_hidden;
+        document.getElementById('pinza').value = pinza_hidden;
+
+        document.getElementById('q1f').value = th1f_hidden;
+        document.getElementById('q2f').value = th2f_hidden;
+        document.getElementById('q3f').value = th3f_hidden;
+        document.getElementById('q4f').value = th4f_hidden;
+        document.getElementById('q5f').value = th5f_hidden;
+        document.getElementById('pinzaf').value = pinzaf_hidden;
+    });
+
+</script>
+</head>
+<body>
+    <ul id="banner">
+        <li><a href="/">Inicio</a></li>
+        <li ><a href="/directa">Directa</a></li>
+        <li><a href="/inversa">Inversa</a></li>
+        <li><a class="active" href="/ptp">PTP</a></li>
+
+    </ul>
+    <div id="header"><h1>Peer To Peer</h1></div>
+    <div> 
+        <iframe id="frame" src={{url_for("static",filename="fig1.html")}} title="Web in a web"></iframe>
+     </div>
+     <div>
+        <fieldset id="controles">
+            <legend id="ftitle"><b>Inicial</b></legend>
+            <form action="/peer" method="post">
+                <span class="titlebut"><b>Q1</b></span>
+                <input type="hidden" id="th1_hidden" name="th1_hidden" value="{{ th1_value }}" min="-90" max="90">
+                <input class="spinners"  type="number" name="Q1" id="q1" value="{{ th1_value }}" >
+                <br>
+                <span class="titlebut"><b>Q2</b></span>
+                <input type="hidden" id="th2_hidden" name="th2_hidden" value="{{ th2_value }}" min="-90" max="90">
+                <input class="spinners"  type="number" name="Q2" id="q2" value="{{ th2_value }}" >
+                <br>
+                <span class="titlebut"><b>Q3</b></span>
+                <input type="hidden" id="th3_hidden" name="th3_hidden" value="{{ th3_value }}" min="-90" max="90">
+                <input class="spinners" type="number" name="Q3" id="q3" value="{{ th3_value }}" >
+                <br>
+                <span class="titlebut"><b>Q4</b></span>
+                <input type="hidden" id="th4_hidden" name="th4_hidden" value="{{ th4_value }}" min="-90" max="90">
+                <input class="spinners" type="number" name="Q4" id="q4" value="{{ th4_value }}" >
+                <br>
+                <span class="titlebut"><b>Q5</b></span>
+                <input type="hidden" id="th5_hidden" name="th5_hidden" value="{{ th5_value }}" min="-90" max="90">
+                <input class="spinners"  type="number" name="Q5" id="q5" value="{{ th5_value }}" >
+                <br>
+                <span class="titlebut"><b>Pinza</b></span>
+                <input type="hidden" id="pinza_hidden" name="pinza_hidden" value="{{ pinza_value }}" min="-90" max="90">
+                <input class="spinners"  type="number" name="PINZA" id="pinza" value="{{ pinza_value }}" min="-90" max="90">
+                <br>
+                 <span class="titlebut"><b>Q1f</b></span>
+                <input type="hidden" id="th1f_hidden" name="th1f_hidden" value="{{ th1f_value }}" min="-90" max="90">
+                <input class="spinners"  type="number" name="Q1f" id="q1f" value="{{ th1f_value }}" >
+                <br>
+                <span class="titlebut"><b>Q2f</b></span>
+                <input type="hidden" id="th2f_hidden" name="th2f_hidden" value="{{ th2f_value }}" min="-90" max="90">
+                <input class="spinners"  type="number" name="Q2f" id="q2f" value="{{ th2f_value }}" >
+                <br>
+                <span class="titlebut"><b>Q3f</b></span>
+                <input type="hidden" id="th3f_hidden" name="th3f_hidden" value="{{ th3f_value }}" min="-90" max="90">
+                <input class="spinners" type="number" name="Q3f" id="q3f" value="{{ th3f_value }}" >
+                <br>
+                <span class="titlebut"><b>Q4f</b></span>
+                <input type="hidden" id="th4f_hidden" name="th4f_hidden" value="{{ th4f_value }}" min="-90" max="90">
+                <input class="spinners" type="number" name="Q4f" id="q4f" value="{{ th4f_value }}" >
+                <br>
+                <span class="titlebut"><b>Q5</b></span>
+                <input type="hidden" id="th5f_hidden" name="th5f_hidden" value="{{ th5f_value }}" min="-90" max="90">
+                <input class="spinners"  type="number" name="Q5f" id="q5f" value="{{ th5f_value }}" >
+                <br>
+                <span class="titlebut"><b>Pinza_f</b></span>
+                <input type="hidden" id="pinzaf_hidden" name="pinzaf_hidden" value="{{ pinzaf_value }}" min="-90" max="90">
+                <input class="spinners"  type="number" name="PINZAf" id="pinzaf" value="{{ pinzaf_value }}" min="-90" max="90">
+                <input type="submit"  id="q1mas" value="enviar">
+            </form>
+         </fieldset>
+     </div>
+     <div>
+        <fieldset>
+            <legend id="ftitle"><b>Que es PTP</b></legend>
+            <p class="parr">
+                PTP es un acronimo de punto a punto (peer to peer), es un calculo mediante el cual interpolamos
+                el moviento de una articulacion en un determinado tiempo en una serie finita de pasos.
+                Para el caso de nuestro robot un tiempo de 2 segundos suaviza bastante las trayectorias de cada eslabon
+                en 50 pasos, mas alla de eso, el robot y concretamente el Arduino tienen problemas para leer y aplicar todos los angulos
+                en el tiempo requerido.
+                Ahora bien el calculo se realiza mediante suma de polinomios, en nuestro caso usamos el de quinto orden
+                que suaviza mas las trayectorias de los servos a pesar de las limitaciones de estos.
+                A continucacion la grafica que relaciona la posicion, la velocidad y la aceleracion
+            </p>
+            <div>
+                <img class="tpicture5" src="{{url_for("static",filename="pos.png")}}" alt="">
+                <img class="tpicture5" src="{{url_for("static",filename="vel.png")}}" alt="">
+                <img class="tpicture5" src="{{url_for("static",filename="acc.png")}}" alt="">
+                <img class="tpicture5" src="{{url_for("static",filename="Figure_1.png")}}" alt="">
+            </div>
+            <p class="parr" >
+                El calculo del polinomio para obtener los valores de angulo se calculan de la siguiente manera:
+                Se genera el polinomio y se aplica la primera y segunda derivada a ese, que son velocidad y aceleracion
+                respectivamente.
+                Numericamente se calculan los valores de a de cada polinomio extrayendolas y formando una matriz con los valores conocidos
+                la inversa de esa matriz se multiplica por un vector de valores conocidos, como son el punto inicial, el final, las velocidades y aceleraciones igualadas a cero
+                ello nos dara nuestras constantes a despejadas, posterior con esas a se calcula cada valor de posicion
+                velocidad y aceleracion acorde al polinomio de cada uno con los 50 valores de tiempo entre el tiempo inicial y final.
+                cada valor de tiempo nos da un valor de que se acerca al valor final.
+            </p>
+            <div>
+                <img class="tpicture3" src="{{url_for("static",filename="ptpcalc.jpg")}}" alt="">
+            </div>
+        </fieldset>
+     </div>
+     
+     
+</body>
+</html>

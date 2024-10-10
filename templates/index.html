@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Robot 5dof</title>
+    <link rel="stylesheet" href={{url_for("static",filename="css/styles.css")}} type="text/css">
+</head>
+<body>
+    <ul id="banner">
+        <li><a class="active"href="/">Inicio</a></li>
+        <li ><a href="/directa">Directa</a></li>
+        <li><a href="/inversa">Inversa</a></li>
+        <li><a href="/ptp">PTP</a></li>
+
+    </ul>
+    <div id="header"><h1>Reporte de actividades PTR</h1></div>
+    <div> 
+        <img src="" alt="">
+     </div>
+     <div>
+        <fieldset id="controles">
+            <legend id="ftitle"><b>Que es PTR</b></legend>
+            <p class="parr" >PTR es el acronimo de la tarea de diseñar, optimizar y programar
+            trayectorias que ha de seguir una cadena cinematica, en nuestro caso el robot BR01.
+            Dicha tarea es si y solo si capaz de ser completada mediante el conocimiento de los
+            modelos cinematicos del robot, pues estos algoritmos capacitaran a los actuadores presentes
+            en el robot para realizar dichas Tareas.</p>
+            <br>
+            <img src="{{url_for("static",filename="trayecto.jpg")}}" alt="">
+            <br>
+            <p class="parr">
+                Las tecnicas para el diseño de estas trayectorias dependen en gran medida de los modelos mencionados
+                en nuestro particular caso haremos uso de la cinematica directa e inversa del robot. Las herramientas para 
+                la creacion de trayectorias que fueron usadas son la el agoritmo PTP con polinomio de 5° orden, el calculo de 
+                la linea por vectores.
+            </p>
+            <br>
+            <img class=foto src="{{url_for("static",filename="p2.jpg")}}" alt="foto robot BR01">
+            <p class="parr">
+                Para la realizacion de esta practica se uso una funente de poder, servomotores, 
+                una Raspberry pi 4 un arduino nano, cables, soldadura y una placa de prototipado.
+                En la foto adjunta se puede observa como desde la Raspberry Pi se envian datos al
+                arduino, esto se realiza por medio del protocolo <b>I2C</b>, dicho protocolo es muy 
+                rapido para el envio y recepcion de datos, ademas de ser muy practico pues solo requiere
+                de dos cables para comunicar.
+                <br>
+                Por otro lado se alcanza a ver como el robot se compone de varios servos, 6 para
+                ser exactos, cinco de estos son para posición y orientacion, y uno para la pinza
+                se incluyo un dc-dc converter para no afectar los servos pequeños(azules) ya que son 
+                susceptibles a fallos por variaciones en el voltaje, los servos mas grandes son los
+                MG 995, servos comunes con un voltaje de uso de 5-7 volts, son mas  resistentes
+                que los anteriores pero su fuerza es muy limitada, lo que limita la capacidad de carga del robot.
+
+            </p>
+         </fieldset>
+     </div>
+     <div>
+        <fieldset>
+            <legend id="ftitle"><b>La electronica</b></legend>
+            <p class="parr" >
+                Para comenzar a hablar de como se realizo podemos recurrir a los siguientes diagramas:
+                En la imagen al costado se muestra un boceto del primer diagrama del robot, en aquella version
+                los servos se conectaron a un RP2040, con comunicacion bluetooth.
+                <br>
+                El micro usaba I2C para comunicarse con un display que mostraba los angulos recibidos
+                por el bluetooth, un buzzer para avisar que los datos habian sido recibidos y se estaba libre
+                para recepcion, sin embargo, por usar el protocolo RS232 en el bluetooth la comunicacion
+                era algo lenta, y el RP2040 contenido en las Raspberry pi pico carecia de un buen LDO, las 
+                señales PWM eran algo viciadas y los motores sufrian Jittering.
+
+                Actualmente como detallamos, el control de los motores depende de un arduino nano, pero 
+                el calculo de las cinematicas y otros algoritmos depende totalmente de la Raspberri Pi 4.
+
+            </p>
+            <br>
+            <div>
+                <img id="foto2" src="{{url_for("static",filename="diagrama.jpg")}}" alt="">
+                <img id="foto3" src="{{url_for("static",filename="diagrama2.png")}}" alt="">
+            </div>
+            <p class="parr" >
+                Los diagramas de arriba tiene su forma condensada en la siguiente placa, dicha placa 
+                como se detallo en parrafos anteriores, es de prototipado, se soldaron conexiones
+                y adaptadores especiales para poder montarla y desmontarla facilmente de los componentes
+                mas criticos o susceptibles a reparaciones, si bien es algo rustica, puesto que fue hecha 
+                a mano, cumple con su proposito de intercomunicar la Raspberry, el Arduino, los servos y 
+                su alimentacion.
+            </p>
+            <div>
+                <img class="tpicture" src="{{url_for("static",filename="detalleplaca.jpg")}}" alt="">
+                <img class="tpicture" src="{{url_for("static",filename="placac.jpg")}}" alt="">
+                <img class="tpicture" src="{{url_for("static",filename="conrob.jpg")}}" alt="">
+            </div>
+        </fieldset>
+     </div>
+     <div>
+        <fieldset>
+         <legend id="ftitle"><b>El software</b></legend>
+         <p class="parr">
+            Para controlar el robot se realizo una primera interfaz en Matlab, este es una herramienta
+            potente, pero un poco dificil para su documentacion, esta primera interfaz se abandono dado
+            que el software en si funciona bien, pero pasado un tiempo generaba problemas en el pc, como
+            congelamientos de pantalla o el cierre de la aplicacion en momentos criticos de la programacion.
+            <br>
+            Posteriormente se recurrio a una tecnologia llamada pyscript, esta ofrece la ventaja de correr
+            codigo python en la web via webassembly, sin embargo su uso se abandono dada su inflexibilidad
+            y la documentacion escasa, aunado a ello esta tecnologia no posibilita el deployment de una app
+            web rapidamente y con los recursos del pc serividor, sino que requiere de importar todos los archivos
+            usados a un file system en la nube con acceso inflexible para el desarrollador y un "limitado 
+            banco de librerias" para trabajar.
+            <br>
+            Por ultimo se migro todo a una app web que corre con el framework Flask para python, 
+            la ventaja de esto radica en que muy poco codigo se tuvo que rescribir en comparacion 
+            con la anterior, es capaz de correr enteramente en el pc servidor y aprovechar los recursos
+            de hardware y software existentes en el, posibilitando una conexion mas directa y en tiempo real 
+            con el preciado hardware sustancial en nuestro proyecto.
+            Las ventajas de usar este framework se pueden listar y serian varias mas, sin embargo nos limitaremos 
+            demostrar las ventajas y el dinamismo que este ofrece invitandote a que des clic en cualquiera de los
+            botones de la barra de navegacion y lo veas por ti mismo.
+         </p>
+         <br>
+         <div>
+                <img class="tpicture" src="{{url_for("static",filename="matlab.png")}}" alt="">
+                <img class="tpicture" src="{{url_for("static",filename="pyscript.jpg")}}" alt="">
+                <img class="tpicture" src="{{url_for("static",filename="flask.png")}}" alt="">
+         </div>
+            
+        </fieldset>
+     </div>
+     
+</body>
+</html>

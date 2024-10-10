@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Robot 5dof</title>
+    <link rel="stylesheet" href={{url_for("static",filename="css/styles.css")}} type="text/css">
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.5/socket.io.js" charset="utf-8"></script>
+</head>
+<body>
+    <ul id="banner" style="z-index: 200;">
+        <li><a href="/">Inicio</a></li>
+        <li ><a href="/directa">Directa</a></li>
+        <li><a class="active" href="/inversa">Inversa</a></li>
+        <li><a href="/ptp">PTP</a></li>
+    </ul>
+    <div id="wrapper">
+        <div id="header"><h1>Inversa</h1></div>
+        <div id="plot"  class="background";"> </div>
+    </div>
+    
+
+     <fieldset id="mainfield">
+     <div>    
+        <fieldset id="controles">
+            <legend id="ftitle"><b>Controles</b></legend>
+                <span class="titlebut"><b>X</b></span>
+                <input class="spinners"  type="number" name="X" id="x" value="{{ x_value }}" step="1">
+                <br>
+                <span class="titlebut"><b>Y</b></span>
+                <input class="spinners"  type="number" name="Y" id="y" value="{{ y_value }}"  step="1">
+                <br>
+                <span class="titlebut"><b>Z</b></span>
+                <input class="spinners" type="number" name="Z" id="z" value="{{ z_value }}"  step="1">
+                <br>
+                <span class="titlebut"><b>A</b></span>
+                <input class="spinners" type="number" name="A" id="a" value="{{ a_value }}"  step="1">
+                <br>
+                <span class="titlebut"><b>B</b></span>
+                <input class="spinners"  type="number" name="B" id="b" value="{{ b_value }}"  step="1">
+                <br>
+                <span class="titlebut"><b>G</b></span>
+                <input class="spinners"  type="number" name="G" id="g" value="{{ g_value }}"  step="1">
+                <br>
+                <span class="titlebut"><b>Pinza</b></span>
+                <input class="spinners"  type="number" name="PINZA" id="pinza" value="{{ pinza_value }}" step="1">
+                <br>
+         </fieldset>
+    </div>
+     <div>
+        <fieldset id="Resultados" style="float:right;">
+            <legend id="ftitle"><b>Resultados</b></legend>
+            <div>
+                <span class="titlebut"><b>Q1</b></span>
+                <input class="resultados" type="number" name="th1" value="{{ th1_value }}" id="q1" readonly>
+            </div>
+            <div>
+                <span class="titlebut"><b>Q2</b></span>
+                <input class="resultados" type="number" name="th2" value="{{ th2_value }}" id="q2" readonly>
+            </div>
+            <div>
+                <span class="titlebut"><b>Q3</b></span>
+                <input class="resultados" type="number" name="th3" value="{{ th3_value }}" id="q3" readonly>
+            </div>
+            <div>
+                <span class="titlebut"><b>Q4</b></span>
+                <input class="resultados" type="number" name="th4" value="{{ th4_value }}" id="q4" readonly>
+            </div>
+            <div>
+                <span class="titlebut"><b>Q5</b></span>
+                <input class="resultados" type="number" name="th5" value="{{ th5_value }}" id="q5" readonly>
+            </div>
+
+            
+         </fieldset>
+     </div>
+     <div>
+    <script>
+        const socket = io();
+        // Function to initialize the 3D scatter plot with your specific layout
+        function initPlot() {
+            const data = [{
+                    x: [],
+                    y: [],
+                    z: [],
+                    mode: 'lines+markers',
+                    type: 'scatter3d',
+
+                    marker: {
+                        size: 5,  // Set marker size
+                        color: '#fecea8',  // Set marker color
+                    line: {
+                            width: 80,
+                            color: '#99b898'  // Set line color
+                        },
+                    line: {
+                        color: '#99b898',  // Line color between points
+                        width: 80  // Line width
+                    }
+                    }
+                }];
+
+            const layout = {
+                    width: 900,  // Custom width
+                    height: 900,  // Custom height
+                    autosize: true,
+                    margin: {t: 0, b: 0, l: 0, r: 0},  // Custom margins
+                    //template: 'plotly_dark',  // Dark theme
+                    scene: {
+                        xaxis: {nticks: 15, range: [-27, 27]},  // X-axis range and ticks
+                        yaxis: {nticks: 15, range: [-27, 27]},  // Y-axis range and ticks
+                        zaxis: {nticks: 15, range: [-10, 38]},  // Z-axis range and ticks
+                        bgcolor: '#1e1e1e', // Dark background for 3D scene
+                        aspectratio:{x: 1.5, y: 1.5, z: 1.5}
+                    },
+                    paper_bgcolor: '#1e1e1e',  // Dark background for the plot
+                    plot_bgcolor: '#1e1e1e',   // Dark background for the plot area
+                    font: {
+                        color: '#ffffff'  // White text
+                    }
+                };
+                var config = {
+                responsive: false  // Disable responsiveness
+                };
+
+            Plotly.newPlot('plot', data, layout,config);
+            }
+                // Function to update the 3D scatter plot with new data
+            function updatePlot(data) {
+                //console.log("Received data from server:", data);  // Debugging output
+                Plotly.restyle('plot', {
+                    x: [data.x],
+                    y: [data.y],
+                    z: [data.z]
+                });
+            }
+        // Initialize the plot
+        initPlot();
+         // Arrays to store the initial and changed values
+        let initialValues = [];
+        let changedValues = [];
+
+        // Function to store the initial values of all inputs
+        function storeInitialValues() {
+            initialValues = [];
+            $('#q1, #q2, #q3, #q4, #q5, #pinza').each(function() {
+            initialValues.push($(this).val()); // Store the current value of each input
+            });
+        }
+
+        // Function to store the changed values of all inputs
+        function storeChangedValues() {
+            changedValues = [];
+            $('#q1, #q2, #q3, #q4, #q5, #pinza').each(function() {
+            changedValues.push($(this).val()); // Store the current value of each input
+            });
+
+            // Log both arrays
+            console.log("Initial Values: ", initialValues);
+            console.log("Changed Values: ", changedValues);
+        }
+        function sendValues() {
+            var x = $('#x').val();
+            var y = $('#y').val();
+            var z = $('#z').val();
+            var a = $('#a').val();
+            var b = $('#b').val();
+            var c = $('#g').val();
+            var p = $('#pinza').val();
+            var arr = [x,y,z,a,b,c,p];
+
+            // Sending values through socket as you're doing
+            //socket.send(arr);
+            socket.emit('invk', arr);
+            //console.log(arr);
+            }
+            setInterval(storeInitialValues, 1000);
+
+            $('#x, #y, #z, #a, #b, #g, #pinza').on('input', function() {
+                sendValues();
+                //storeChangedValues();
+
+                //let ang = [initialValues,changedValues];
+                //socket.emit('ptp',ang);
+                //console.log(ang)
+
+                });
+    
+        
+
+        socket.on('data', function(data) {
+            //console.log("Received data from server:", data);
+            updatePlot(data);  // Update the plot with the new data
+        });
+
+        socket.on('ang',function(theta){
+            //console.log(xyz);
+            let q1 = theta[0];
+            let q2 = theta[1];
+            let q3 = theta[2];
+            let q4 = theta[3];
+            let q5 = theta[4];
+            //console.log("x: ",x);
+            $('#q1').val(q1);
+            $('#q2').val(q2);
+            $('#q3').val(q3);
+            $('#q4').val(q4);
+            $('#q5').val(q5);
+        });
+        socket.on('eu',function(abc){
+            console.log(abc);
+            let a = abc[0];
+            let b = abc[1];
+            let c = abc[2];
+
+            $('#a').val(a);
+            $('#b').val(b);
+            $('#c').val(c);
+        }); 
+    </script>
+
+        <script>
+        const fieldset = document.getElementById("mainfield");
+        let isDragging = false;
+        let offsetX = 0;
+        let offsetY = 0;
+
+        // Pointer events (includes mouse, touch, and pen inputs)
+        fieldset.addEventListener('pointerdown', (e) => {
+            if (e.pointerType === 'pen' || e.pointerType === 'touch' || e.pointerType === 'mouse') {
+                isDragging = true;
+                offsetX = e.clientX - fieldset.offsetLeft;
+                offsetY = e.clientY - fieldset.offsetTop;
+            }
+        });
+
+        document.addEventListener('pointermove', (e) => {
+            if (isDragging && (e.pointerType === 'pen' || e.pointerType === 'touch' || e.pointerType === 'mouse')) {
+                fieldset.style.left = `${e.clientX - offsetX}px`;
+                fieldset.style.top = `${e.clientY - offsetY}px`;
+            }
+        });
+
+        document.addEventListener('pointerup', () => {
+            isDragging = false;
+        });
+    </script>
+     
+</body>
+</html>

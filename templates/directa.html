@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Robot 5dof</title>
+    <link rel="stylesheet" href={{url_for("static",filename="css/styles.css")}} type="text/css">
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.5/socket.io.js" charset="utf-8"></script>
+    
+
+
+</head>
+<body>
+    <ul id="banner">
+        <li><a href="/">Inicio</a></li>
+        <li ><a class="active" href="/directa">Directa</a></li>
+        <li><a href="/inversa">Inversa</a></li>
+        <li><a href="/ptp">PTP</a></li>
+
+    </ul>
+
+    <div id="wrapper">
+        <div id="header"><h1>Directa</h1></div>
+        <div id="plot" class="background"> </div>
+    </div>
+
+    <fieldset id="mainfield">
+        <div>
+            <fieldset class=".field" id="Controles">
+                <legend id="ftitle"><b>Controles</b></legend>
+
+                <span class="titlebut"><b>Q1</b></span>
+                
+                <input class="spinners"  type="number" name="Q1" id="q1" value="{{ th1_value }}" min="-90" max="90" step="10">
+                <br>
+                <span class="titlebut"><b>Q2</b></span>
+                
+                <input class="spinners"  type="number" name="Q2" id="q2" value="{{ th2_value }}" min="-90" max="90" step="10">
+                <br>
+                <span class="titlebut"><b>Q3</b></span>
+                
+                <input class="spinners" type="number" name="Q3" id="q3" value="{{ th3_value }}" min="-90" max="90" step="10">
+                <br>
+                <span class="titlebut"><b>Q4</b></span>
+              
+                <input class="spinners" type="number" name="Q4" id="q4" value="{{ th4_value }}" min="-90" max="90" step="10">
+                <br>
+                <span class="titlebut"><b>Q5</b></span>
+                
+                <input class="spinners"  type="number" name="Q5" id="q5" value="{{ th5_value }}" min="-90" max="90" step="10">
+                <br>
+                <span class="titlebut"><b>Pinza</b></span>
+               
+                <input class="spinners"  type="number" name="PINZA" id="pinza" value="{{ pinza_value }}" min="-90" max="90" step="10">
+                <br>
+            </fieldset>
+        </div>
+     <div>
+        <fieldset class=".field" id="Resultados">
+            <legend id="ftitle"><b>Resultados</b></legend>
+            <div>
+                <span class="titlebut"><b>X</b></span>
+                <input class="resultados" type="number" name="x" value="{{ x_value }}" id="x" readonly>
+            </div>
+            <div>
+                <span class="titlebut"><b>Y</b></span>
+                <input class="resultados" type="number" name="y" value="{{ y_value }}" id="y" readonly>
+            </div>
+            <div>
+                <span class="titlebut"><b>Z</b></span>
+                <input class="resultados" type="number" name="z" value="{{ z_value }}" id="z" readonly>
+            </div>
+            <div>
+                <span class="titlebut"><b>Alpha</b></span>
+                <input class="resultados" type="number" name="alpha" value="{{ a_value }}" id="a" readonly>
+            </div>
+            <div>
+                <span class="titlebut"><b>Beta</b></span>
+                <input class="resultados" type="number" name="beta" value="{{ b_value }}" id="b" readonly>
+            </div>
+            <div>
+                <span class="titlebut"><b>Gamma</b></span>
+                <input class="resultados" type="number" name="gamma" value="{{ g_value }}" id="c" readonly>
+            </div>
+            
+        </fieldset>
+     </div>
+    </fieldset>
+    
+    
+    <script>
+    const socket = io();
+      // Function to initialize the 3D scatter plot with your specific layout
+        function initPlot() {
+            const data = [{
+                x: [],
+                y: [],
+                z: [],
+                mode: 'lines+markers',
+                type: 'scatter3d',
+
+                marker: {
+                    size: 2,  // Set marker size
+                    color: '#fecea8',  // Set marker color
+                line: {
+                        width: 5,
+                        color: '#99b898'  // Set line color
+                    },
+                line: {
+                    color: '#99b898',  // Line color between points
+                    width: 80  // Line width
+                }
+                }
+            }];
+
+            const layout = {
+                    width: 900,  // Custom width
+                    height: 900,  // Custom height
+                    autosize: true,
+                    margin: {t: 0, b: 0, l: 0, r: 0},  // Custom margins
+                    //template: 'plotly_dark',  // Dark theme
+                    scene: {
+                        xaxis: {nticks: 15, range: [-27, 27]},  // X-axis range and ticks
+                        yaxis: {nticks: 15, range: [-27, 27]},  // Y-axis range and ticks
+                        zaxis: {nticks: 15, range: [-10, 38]},  // Z-axis range and ticks
+                        bgcolor: '#1e1e1e', // Dark background for 3D scene
+                        aspectratio:{x: 1.5, y: 1.5, z: 1.5}
+                    },
+                    paper_bgcolor: '#1e1e1e',  // Dark background for the plot
+                    plot_bgcolor: '#1e1e1e',   // Dark background for the plot area
+                    font: {
+                        color: '#ffffff'  // White text
+                    }
+                };
+                var config = {
+                responsive: false  // Disable responsiveness
+                };
+
+            Plotly.newPlot('plot', data, layout,config);
+            }
+            // Function to update the 3D scatter plot with new data
+        function updatePlot(data) {
+            //console.log("Received data from server:", data);  // Debugging output
+            Plotly.restyle('plot', {
+                x: [data.x],
+                y: [data.y],
+                z: [data.z]
+            });
+        }
+    // Initialize the plot
+    initPlot();
+    function sendValues() {
+            var q1 = $('#q1').val();
+            var q2 = $('#q2').val();
+            var q3= $('#q3').val();
+            var q4 = $('#q4').val();
+            var q5 = $('#q5').val();
+            var p = $('#pinza').val();
+            var arr = [q1,q2,q3,q4,q5,p];
+
+            // Sending values through socket as you're doing
+            //socket.send(arr);
+            socket.emit('fork', arr);
+            console.log(arr);
+            //console.log(arr);
+            }
+
+  // Attach event listener for when input changes
+  $('#q1, #q2, #q3, #q4, #q5, #pinza').on('input', function() {
+    sendValues();
+  });
+    
+    //console.log(arr);
+        // Request new scatter data from the server periodically
+        //setInterval(function() {
+            //socket.emit('get_scatter_data');  // Request new data from the server
+        //}, 15);  // Every 2 seconds
+
+    // Listen for new data from the server and update the plot
+  socket.on('data', function(data) {
+    //console.log("Received data from server:", data);
+    updatePlot(data);  // Update the plot with the new data
+   });
+
+  socket.on('coor',function(xyz){
+    //console.log(xyz);
+    let x = xyz[0];
+    let y = xyz[1];
+    let z = xyz[2];
+    //console.log("x: ",x);
+    $('#x').val(x);
+    $('#y').val(y);
+    $('#z').val(z);
+  });
+  socket.on('eu',function(abc){
+    //console.log(abc);
+    let a = abc[0];
+    let b = abc[1];
+    let c = abc[2];
+
+    $('#a').val(a);
+    $('#b').val(b);
+    $('#c').val(c);
+  });
+    </script>
+    <script>
+        const fieldset = document.getElementById("mainfield");
+        let isDragging = false;
+        let offsetX = 0;
+        let offsetY = 0;
+
+        // Pointer events (includes mouse, touch, and pen inputs)
+        fieldset.addEventListener('pointerdown', (e) => {
+            if (e.pointerType === 'pen' || e.pointerType === 'touch' || e.pointerType === 'mouse') {
+                isDragging = true;
+                offsetX = e.clientX - fieldset.offsetLeft;
+                offsetY = e.clientY - fieldset.offsetTop;
+            }
+        });
+
+        document.addEventListener('pointermove', (e) => {
+            if (isDragging && (e.pointerType === 'pen' || e.pointerType === 'touch' || e.pointerType === 'mouse')) {
+                fieldset.style.left = `${e.clientX - offsetX}px`;
+                fieldset.style.top = `${e.clientY - offsetY}px`;
+            }
+        });
+
+        document.addEventListener('pointerup', () => {
+            isDragging = false;
+        });
+    </script>
+     
+</body>
+</html>

@@ -1,0 +1,190 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="body_1" width="834" height="65">
+
+<defs>
+<style type="text/css"><![CDATA[
+@font-face {font-family:'cmex10';
+src: url("data:font/truetype;charset=utf-8;base64,AAEAAAAKAIAAAwAgaGVhZCuxPLQAAACsAAAANmhoZWEFmARqAAAA5AAAACRtYXhwFxUzHQAAAQgAAAAgaG10eBH0BO8AAAEoAAAAHGxvY2EAAATeAAABRAAAACBnbHlmFbMIWAAAAWQAAAEsT1MvMh1KGSsAAAKQAAAAYG5hbWWs9szIAAAC8AAAARRjbWFwAMMBDAAABAQAAABUcG9zdAADAAAAAARYAAAAIAABAAAAAAAAgghbml8PPPUAAAPoAAAAAOJQeegAAAAA4lB56AAAAAAIAAgAAAAABgAAAAEAAAAAAAEAAAAAAAAAAAXn/+j+fAWuAAAAAAAAAAAAAAAAAAAAAAAHAAEAAAAHEAAEAAD/AP8AAgAQAP8A/wD/EAAgAAD/AB4CWAAAApoBRgKaAUYCmgFGApoABwKaAQ8CmgAHAAAAAAAAADgAAABkAAAAhgAAALIAAADeAAABAAAAASwAAgAAAAACWAgAAAMABwAAAQEBAQEBAQEAAAAAAlgAAP2tAk4AAP2yAAAIAAAA+AAABQAAB/YAAAABAUb5IAKTACcABQAAAQEBAQEBAUYARQAAAQgAAP6z+SAAAAbCAAAARQAAAAEBRv2nAYsAAQADAAABAQEBAUYARQAA/7v9pwAAAloAAAABAUb5IQKTACgABQAAAQEBAQEBAUYBTQAA/vgAAP+7+SEAAABFAAAGwgAAAAEAB/kgAVQAJwAFAAABAQEBAQEBDwBFAAD+swAAAQj5IAAABwcAAP+7AAAAAQEP/acBVAABAAMAAAEBAQEBDwBFAAD/u/2nAAACWgAAAAEAB/khAVQAKAAFAAABAQEBAQEBD/74AAABTQAA/7v5ZgAA/7sAAAcHAAAAAwQwAZAABQAIBZoFMwAAARsFmgUzAAAD0QBmAhIAAAIABQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAACD7AgWa/mYAzQa0AaIAAAAAAAAAAAQAAAAAAAAgAAAAAAAMAJYAAQAAAAAAAQAGAAAAAQAAAAAAAgAHAAYAAQAAAAAAAwAGAA0AAQAAAAAABAAGABMAAQAAAAAABQALABkAAQAAAAAABgAGACQAAwABBAkAAQAMACoAAwABBAkAAgAOADYAAwABBAkAAwAMAEQAAwABBAkABAAMAFAAAwABBAkABQAWAFwAAwABBAkABgAMAHJjbWV4MTBSZWd1bGFyY21leDEwY21leDEwVmVyc2lvbiAxLjFjbWV4MTAAYwBtAGUAeAAxADAAUgBlAGcAdQBsAGEAcgBjAG0AZQB4ADEAMABjAG0AZQB4ADEAMABWAGUAcgBzAGkAbwBuACAAMQAuADEAYwBtAGUAeAAxADAAAAABAAMAAQAAAAwABABIAAAADgAIAAIABgAyADMANAA1ADYAN///AAAAMgAzADQANQA2ADf////P/9H/z//R/8z/zgABAAAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==");
+}
+@font-face {font-family:'cmmi10';
+src: url("data:font/truetype;charset=utf-8;base64,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");
+}
+@font-face {font-family:'cmr10';
+src: url("data:font/truetype;charset=utf-8;base64,AAEAAAAKAIAAAwAgaGVhZCuxPLQAAACsAAAANmhoZWEDywOdAAAA5AAAACRtYXhwFxYzHQAAAQgAAAAgaG10eBAEAVQAAAEoAAAAIGxvY2EAABzSAAABSAAAACRnbHlmYfnFYgAAAWwAAAecT1MvMh1KGSsAAAkIAAAAYG5hbWWAWzCPAAAJaAAAAQhjbWFwAMQBSAAACnAAAABccG9zdAADAAAAAArMAAAAIAABAAAAAAAATR4Vol8PPPUAAAPoAAAAAOJQeegAAAAA4lB56AAAAAAIAAgAAAAABgAAAAEAAAAAAAEAAAAAAAAAAAQD/9j/kgPxAAAAAAAAAAAAAAAAAAAAAAAIAAEAAAAIEAAEAAD/AP8AAgAQAP8A/wD/EAAgAAD/AB4CWAAAAfQAWQH0ACcB9AAyAfQAKgH0ABwB9AAyAfQAKgAAAAAAAAA4AAAA0gAAAdwAAALMAAAELgAABOgAAAZuAAAHnAACAAAAAAJYCAAAAwAHAAABAQEBAQEBAQAAAAACWAAA/a0CTgAA/bIAAAgAAAD4AAAFAAAH9gAAAAEAWQAAAaMCmgAbAAABAAABAAABAQAAAQEAAAEBAQAAAQAAAQEBAAABASYAAP/6/+//0f+R/+gAAAAPAE0AJwAAAAD/5v+9/+AAAAAaAGoAHgAeAGkAGwAA/+D/vP/nAAACgAASAAgAAP/Q//AAAP/hAAAABgAU/fr/5f/rAAAAAP/hAAIAAQAAAAD////+AB8AAAAAABQAHAACACf/6gHMApoAGAAxAAABAAABAAABAAABAAABAAABAAABAAABAAABAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQHMAAD/8v/m/93/mP/h/9P/nf/i/+j/8wAAAAAADgAfACAAYAAlACgAZQAhABgADQAA/y3/4v+3//P/9//+AAAAAAACAAYADgBWABMAGABPAA8ABwADAAAAAP/9//j/9P+4/98BQAA8AHYAOABIACgAAAAA/87/u//M/43/xP/H/4H/x//D/9gAAAAAACwASAAzAHMAPP7AAAAAMQBIAC0AeQAtADAAXwApAFkAJwAAAAD/1f+2/9b/lv/R/8f/mv/Q/7j/ywAAAAEAMgAAAcECmgAsAAABAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQEAAAEBAQEAAAEAAAEAfwBqAHUAYwAAAAD/h/+l/6v/mgAAAAAAMgADAAwAKAAAAAD/5f/m//r/+//+ABEASgAsAEQAQgAAAAD/wP/X/0D/9//+AAABcwAc/+f//P/1//n/+v+3//AATQBnAGcAcgBLAFUAbQAAAAD/jf++/9b/8gAAAAAAFgAfABMAIQAAAAD//wAAADAANgAAAAD/mv/D/8T/jf/S/yr/9//2/+4AAACuAAD/6f/J//X/+v/+AAAAAAEAKv/qAckCmgBDAAABAAABAAABAAABAAABAAABAAABAAABAAABAAABAAABAAABAAABAAABAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQEiAD0ATwAAAAD/kP+4/7T/mwAAAAAAHQAWABcAHAAAAAD/zf/1ABcAUwAbAB4AQgAAAAD/9//t/+n/0P/u//r/5P/7//r/9wAAAAAACwANACwAPQA6AAAAAP+w/9//3/+i/+YAGgAoAAAAAP/d/+v/7v/aAAAAAAB4AFIAWwB6AAAAAP+n/7IBYAAUAGAAPAA9AE0AAAAA/7H/x//n/+UAAAAAAB0AFgAlAA0AAAAkABoAAAAA/9P/vf/3/7j/3//c//AAAP////4AAP////z/+f/3//4AAAAAAAD/o/+3/5r/wQAAAAAAHwAt//wAHgAdABsAHQAAAAD/5//f/7v/qAAAAAAAdABNAD0AaAAQAAIAHAAAAdcCpQAeACEAAAEBAAABAQEAAAEAAAEBAQAAAQEBAQEBAAABAAABAQEBAQEBJgAAAAD/6//J/+sAAAAeAEkAIAAfAEoAHwAA/+v/yP/sAAAAAABkAAD/nAAAAAD//P/0//n/+f/6/s0AAAEQ/wwA9ACl/6n/5f/sAAAAAP/hAAIAAQAAAAD////+AB8AAAAAABQAGwBXAAAAHwAAAccADwALAAAAAP/9//f+K//hAB8AAAF1AAEAMv/qAcECmgBKAAABAAABAAABAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQEAAAEAAAEAAAEAAAEAAAEAAAEAAAEAAAEAAAEAAAEAAAEAAAEAAAEAAAEBwQAA/5P/r//c/8D/5QAAAA8ALgAYAFwAZQAAAAD/+//7/////P/9//H/uf/O/+L/vP/d//r/+/////j//gAAAAAAAAADAAsABQAFAAMACAA8AD0AJwAoAAYADAAGAAAAAP/6/+7/7v/J/97/yf+w//QAAgAGAAkAGAAaAAAAAP/m/+j/9f/aAAAAAABhAFQAVwCDAAAAyQBZAIIAAAAA/+f/5gDD//v/+AAAAAAAXgAKAAQABwAAAAD////+//n/6gAAAAAADAAQAAIAAQAAAAD/9P/0/tj/8v/0AAAAAAAEAAUADAA6AAAAAP/N//P/5P/D/9v/5f+x/+H/4v/dAAAAAABDAC3/////AAAAAAAfABIAEgAfAAAAAP/t/97/v/+KAAAAAAB/AGAAAAIAKv/qAckCmgAiADgAAAEBAAABAAABAAABAAABAAABAAABAAABAAABAAABAAABAAABAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQCEAAAAAACIACcAEgA1ABH/9P/VAAAAAAAdABEADAAiAAAAAP+//8L/oP9ZAAAAAACLAEYAUwB7AAAAAP+L/63/zf/F//EAd//Q/9H//P/y//wAAAAAADYARAAMADkAGAANAAUAAAAA//v/9P/p/8X/7wFIABgAvQBkAAAAAP/x/+cAAP/0/9//6P/qAAAAAAASAB4ALQA/AAAAAP9H/1v/N/93AAAAAAB/AGMAXwCAAAAAAP/B/9z+vgAAAD8ADAAjAGAADgA6AHgAAAAA//D/0v/k/7f/3P/c/7n/5f/T/+wAAAAAAwQwAZAABQAIBZoFMwAAARsFmgUzAAAD0QBmAhIAAAIABQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAACD7AgWa/mYAzQa0AaIAAAAAAAAAAAQAAAAAAAAgAAAAAAAMAJYAAQAAAAAAAQAFAAAAAQAAAAAAAgAHAAUAAQAAAAAAAwAFAAwAAQAAAAAABAAFABEAAQAAAAAABQALABYAAQAAAAAABgAFACEAAwABBAkAAQAKACYAAwABBAkAAgAOADAAAwABBAkAAwAKAD4AAwABBAkABAAKAEgAAwABBAkABQAWAFIAAwABBAkABgAKAGhjbXIxMFJlZ3VsYXJjbXIxMGNtcjEwVmVyc2lvbiAxLjFjbXIxMABjAG0AcgAxADAAUgBlAGcAdQBsAGEAcgBjAG0AcgAxADAAYwBtAHIAMQAwAFYAZQByAHMAaQBvAG4AIAAxAC4AMQBjAG0AcgAxADAAAAABAAMAAQAAAAwABABQAAAAEAAQAAMAAAAwADEAMgAzADQANQA2//8AAAAwADEAMgAzADQANQA2////0v/Q/9H/0f/R/9H/0QABAAAAAAAAAAAAAAAAAAAAAAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
+}
+@font-face {font-family:'cmsy10';
+src: url("data:font/truetype;charset=utf-8;base64,AAEAAAAKAIAAAwAgaGVhZCuxPLQAAACsAAAANmhoZWEEQQI2AAAA5AAAACRtYXhwFxEzHQAAAQgAAAAgaG10eAdVAJQAAAEoAAAADGxvY2EAAAKaAAABNAAAABBnbHlmH5NaYQAAAUQAAAHWT1MvMh1KGSsAAAMcAAAAYG5hbWXKJM30AAADfAAAARRjbWFwAPMAzQAABJAAAAA0cG9zdAADAAAAAATEAAAAIAABAAAAAAAAiyBall8PPPUAAAPoAAAAAOJQeegAAAAA4lB56AAAAAAIAAgAAAAABgAAAAEAAAAAAAEAAAAAAAAAAASw/+P9gwRcAAAAAAAAAAAAAAAAAAAAAAADAAEAAAADEAAEAAD/AP8AAgAQAP8A/wD/EAAgAAD/AB4CWAAAAwkAUwH0AEEAAAAAAAAAOAAAAIwAAAHWAAIAAAAAAlgIAAADAAcAAAEBAQEBAQEBAAAAAAJYAAD9rQJOAAD9sgAACAAAAPgAAAUAAAf2AAAAAQBTAOYCtgEOAA0AAAEAAAEAAAEBAAABAAABApMADAAXAAAAAP/p//T94//z/+oAAAAAABYADQDmAAAABQAPAA8ABQAAAAAAAP/7//H/8f/7AAAAAQBBACIBsgHRAD4AAAEAAAEAAAEBAQEAAAEAAAEAAAEBAQAAAQAAAQAAAQEBAAABAAABAQEAAAEAAAEAAAEAAAEBAAABAAABAAABAQETAAD/+v/t//T/7wADAAAADv+A//n/+v/7//X/8AAAAAAADAAIAI7/dv/0//QAAAAAABAACwAFAAoAEwBw//EAAAAUAAYACQASAAD/8QCAAAYABgAGAAoAEQAAAAD/9P/3/9P/2//FAIoADAAMAAAAAP/v//b/+v/2/+7/kAGrAAoAHAAAAAD/7//3//P/ZQBdAAMABAAAAAD/7v/2//T/9v/9/7z/vf/6//b/9f/0//AAAAAAAAQADwBR/1j/8P/2AAAAAAALAA8AqP+j//z//QAAAAAAEQALAAsACgAFABYAEQAcAEMABgAJAAwACwARAAAAAP/7//L/rwAAAAADBDABkAAFAAgFmgUzAAABGwWaBTMAAAPRAGYCEgAAAgAFAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAIPsCBZr+ZgDNBrQBogAAAAAAAAAABAAAAAAAACAAAAAAAAwAlgABAAAAAAABAAYAAAABAAAAAAACAAcABgABAAAAAAADAAYADQABAAAAAAAEAAYAEwABAAAAAAAFAAsAGQABAAAAAAAGAAYAJAADAAEECQABAAwAKgADAAEECQACAA4ANgADAAEECQADAAwARAADAAEECQAEAAwAUAADAAEECQAFABYAXAADAAEECQAGAAwAcmNtc3kxMFJlZ3VsYXJjbXN5MTBjbXN5MTBWZXJzaW9uIDEuMWNtc3kxMABjAG0AcwB5ADEAMABSAGUAZwB1AGwAYQByAGMAbQBzAHkAMQAwAGMAbQBzAHkAMQAwAFYAZQByAHMAaQBvAG4AIAAxAC4AMQBjAG0AcwB5ADEAMAAAAAEAAwABAAAADAAEACgAAAAGAAQAAQACAKsAxv//AAAAqwDG////Vv88AAEAAAAAAAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==");
+}
+]]></style>
+</defs>
+
+<g transform="matrix(1.3333 0 0 1.3333 0 0)">
+	<g transform="matrix(1 0 0 1 -133.26836 -145.22353)">
+    <path id=""  transform="matrix(1 0 0 1 0 0)"  d="M133.26836 145.22353L759.1313 145.22353L759.1313 194.04466L133.26836 194.04466" stroke="none" fill="#000000" fill-rule="evenodd" fill-opacity="0" />
+		<text transform="matrix(1 0 0 1 0 0)" x="133.76836" y="146.12201" style="fill:#000000;font-family:'cmex10';" font-size="9.96264">2</text>
+		<text transform="matrix(1 0 0 1 0 0)" x="133.76836" y="163.65645" style="fill:#000000;font-family:'cmex10';" font-size="9.96264">6</text>
+		<text transform="matrix(1 0 0 1 0 0)" x="133.76836" y="169.6341" style="fill:#000000;font-family:'cmex10';" font-size="9.96264">6</text>
+		<text transform="matrix(1 0 0 1 0 0)" x="133.76836" y="176.01022" style="fill:#000000;font-family:'cmex10';" font-size="9.96264">4</text>
+		<text transform="matrix(1 0 0 1 0 0)" x="140.41014 148.24326" y="154.09233" style="fill:#000000;font-family:'cmmi10';" font-size="9.96264">CQ</text>
+		<text transform="matrix(1 0 0 1 0 0)" x="156.11926" y="154.09233" style="fill:#000000;font-family:'cmr10';" font-size="9.96264">1</text>
+		<text transform="matrix(1 0 0 1 0 0)" x="171.06323" y="154.09233" style="fill:#000000;font-family:'cmr10';" font-size="9.96264">0</text>
+		<text transform="matrix(1 0 0 1 0 0)" x="190.45651 197.13977" y="154.09233" style="fill:#000000;font-family:'cmmi10';" font-size="9.96264">SQ</text>
+		<text transform="matrix(1 0 0 1 0 0)" x="205.01578" y="154.09233" style="fill:#000000;font-family:'cmr10';" font-size="9.96264">1</text>
+		<text transform="matrix(1 0 0 1 0 0)" x="226.89972" y="154.09233" style="fill:#000000;font-family:'cmr10';" font-size="9.96264">0</text>
+		<text transform="matrix(1 0 0 1 0 0)" x="140.98508 147.66833" y="166.0475" style="fill:#000000;font-family:'cmmi10';" font-size="9.96264">SQ</text>
+		<text transform="matrix(1 0 0 1 0 0)" x="155.54433" y="166.0475" style="fill:#000000;font-family:'cmr10';" font-size="9.96264">1</text>
+		<text transform="matrix(1 0 0 1 0 0)" x="171.06323" y="166.0475" style="fill:#000000;font-family:'cmr10';" font-size="9.96264">0</text>
+		<text transform="matrix(1 0 0 1 0 0)" x="186.00722" y="166.0475" style="fill:#000000;font-family:'cmsy10';" font-size="9.96264">«</text>
+		<text transform="matrix(1 0 0 1 0 0)" x="193.75597 201.58908" y="166.0475" style="fill:#000000;font-family:'cmmi10';" font-size="9.96264">CQ</text>
+		<text transform="matrix(1 0 0 1 0 0)" x="209.46509" y="166.0475" style="fill:#000000;font-family:'cmr10';" font-size="9.96264">1</text>
+		<text transform="matrix(1 0 0 1 0 0)" x="226.89972" y="166.0475" style="fill:#000000;font-family:'cmr10';" font-size="9.96264">0</text>
+		<text transform="matrix(1 0 0 1 0 0)" x="148.2647" y="178.00267" style="fill:#000000;font-family:'cmr10';" font-size="9.96264">0</text>
+		<text transform="matrix(1 0 0 1 0 0)" x="171.06323" y="178.00267" style="fill:#000000;font-family:'cmr10';" font-size="9.96264">1</text>
+		<text transform="matrix(1 0 0 1 0 0)" x="197.73615" y="178.00267" style="fill:#000000;font-family:'cmr10';" font-size="9.96264">0</text>
+		<text transform="matrix(1 0 0 1 0 0)" x="224.40906" y="178.00267" style="fill:#000000;font-family:'cmr10';" font-size="9.96264">10</text>
+		<text transform="matrix(1 0 0 1 0 0)" x="148.2647" y="189.95784" style="fill:#000000;font-family:'cmr10';" font-size="9.96264">0</text>
+		<text transform="matrix(1 0 0 1 0 0)" x="171.06323" y="189.95784" style="fill:#000000;font-family:'cmr10';" font-size="9.96264">0</text>
+		<text transform="matrix(1 0 0 1 0 0)" x="197.73615" y="189.95784" style="fill:#000000;font-family:'cmr10';" font-size="9.96264">0</text>
+		<text transform="matrix(1 0 0 1 0 0)" x="226.89972" y="189.95784" style="fill:#000000;font-family:'cmr10';" font-size="9.96264">1</text>
+		<text transform="matrix(1 0 0 1 0 0)" x="234.37173" y="146.12201" style="fill:#000000;font-family:'cmex10';" font-size="9.96264">3</text>
+		<text transform="matrix(1 0 0 1 0 0)" x="234.37173" y="163.65645" style="fill:#000000;font-family:'cmex10';" font-size="9.96264">7</text>
+		<text transform="matrix(1 0 0 1 0 0)" x="234.37173" y="169.6341" style="fill:#000000;font-family:'cmex10';" font-size="9.96264">7</text>
+		<text transform="matrix(1 0 0 1 0 0)" x="234.37173" y="176.01022" style="fill:#000000;font-family:'cmex10';" font-size="9.96264">5</text>
+		<text transform="matrix(1 0 0 1 0 0)" x="241.01352" y="172.12476" style="fill:#000000;font-family:'cmsy10';" font-size="9.96264">Æ</text>
+		<text transform="matrix(1 0 0 1 0 0)" x="245.99484" y="146.12201" style="fill:#000000;font-family:'cmex10';" font-size="9.96264">2</text>
+		<text transform="matrix(1 0 0 1 0 0)" x="245.99484" y="163.65645" style="fill:#000000;font-family:'cmex10';" font-size="9.96264">6</text>
+		<text transform="matrix(1 0 0 1 0 0)" x="245.99484" y="169.6341" style="fill:#000000;font-family:'cmex10';" font-size="9.96264">6</text>
+		<text transform="matrix(1 0 0 1 0 0)" x="245.99484" y="176.01022" style="fill:#000000;font-family:'cmex10';" font-size="9.96264">4</text>
+		<text transform="matrix(1 0 0 1 0 0)" x="252.63663" y="154.09233" style="fill:#000000;font-family:'cmsy10';" font-size="9.96264">«</text>
+		<text transform="matrix(1 0 0 1 0 0)" x="260.38538 267.06863" y="154.09233" style="fill:#000000;font-family:'cmmi10';" font-size="9.96264">SQ</text>
+		<text transform="matrix(1 0 0 1 0 0)" x="274.94464" y="154.09233" style="fill:#000000;font-family:'cmr10';" font-size="9.96264">2</text>
+		<text transform="matrix(1 0 0 1 0 0)" x="293.18805 301.02115" y="154.09233" style="fill:#000000;font-family:'cmmi10';" font-size="9.96264">CQ</text>
+		<text transform="matrix(1 0 0 1 0 0)" x="308.8972" y="154.09233" style="fill:#000000;font-family:'cmr10';" font-size="9.96264">2</text>
+		<text transform="matrix(1 0 0 1 0 0)" x="331.01495" y="154.09233" style="fill:#000000;font-family:'cmr10';" font-size="9.96264">0</text>
+		<text transform="matrix(1 0 0 1 0 0)" x="349.8333" y="154.09233" style="fill:#000000;font-family:'cmsy10';" font-size="9.96264">«</text>
+		<text transform="matrix(1 0 0 1 0 0)" x="357.58206" y="154.09233" style="fill:#000000;font-family:'cmr10';" font-size="9.96264">10</text>
+		<text transform="matrix(1 0 0 1 0 0)" x="367.54474 374.228" y="154.09233" style="fill:#000000;font-family:'cmmi10';" font-size="9.96264">SQ</text>
+		<text transform="matrix(1 0 0 1 0 0)" x="382.104" y="154.09233" style="fill:#000000;font-family:'cmr10';" font-size="9.96264">2</text>
+		<text transform="matrix(1 0 0 1 0 0)" x="255.93607 263.76917" y="166.0475" style="fill:#000000;font-family:'cmmi10';" font-size="9.96264">CQ</text>
+		<text transform="matrix(1 0 0 1 0 0)" x="271.6452" y="166.0475" style="fill:#000000;font-family:'cmr10';" font-size="9.96264">2</text>
+		<text transform="matrix(1 0 0 1 0 0)" x="289.8886" y="166.0475" style="fill:#000000;font-family:'cmsy10';" font-size="9.96264">«</text>
+		<text transform="matrix(1 0 0 1 0 0)" x="297.63736 304.32062" y="166.0475" style="fill:#000000;font-family:'cmmi10';" font-size="9.96264">SQ</text>
+		<text transform="matrix(1 0 0 1 0 0)" x="312.19662" y="166.0475" style="fill:#000000;font-family:'cmr10';" font-size="9.96264">2</text>
+		<text transform="matrix(1 0 0 1 0 0)" x="331.01495" y="166.0475" style="fill:#000000;font-family:'cmr10';" font-size="9.96264">0</text>
+		<text transform="matrix(1 0 0 1 0 0)" x="353.13275" y="166.0475" style="fill:#000000;font-family:'cmr10';" font-size="9.96264">10</text>
+		<text transform="matrix(1 0 0 1 0 0)" x="363.09543 370.92853" y="166.0475" style="fill:#000000;font-family:'cmmi10';" font-size="9.96264">CQ</text>
+		<text transform="matrix(1 0 0 1 0 0)" x="378.80453" y="166.0475" style="fill:#000000;font-family:'cmr10';" font-size="9.96264">2</text>
+		<text transform="matrix(1 0 0 1 0 0)" x="263.79062" y="178.00267" style="fill:#000000;font-family:'cmr10';" font-size="9.96264">0</text>
+		<text transform="matrix(1 0 0 1 0 0)" x="301.0426" y="178.00267" style="fill:#000000;font-family:'cmr10';" font-size="9.96264">0</text>
+		<text transform="matrix(1 0 0 1 0 0)" x="327.1406" y="178.00267" style="fill:#000000;font-family:'cmsy10';" font-size="9.96264">«</text>
+		<text transform="matrix(1 0 0 1 0 0)" x="334.88934" y="178.00267" style="fill:#000000;font-family:'cmr10';" font-size="9.96264">1</text>
+		<text transform="matrix(1 0 0 1 0 0)" x="365.96866" y="178.00267" style="fill:#000000;font-family:'cmr10';" font-size="9.96264">0</text>
+		<text transform="matrix(1 0 0 1 0 0)" x="263.79062" y="189.95784" style="fill:#000000;font-family:'cmr10';" font-size="9.96264">0</text>
+		<text transform="matrix(1 0 0 1 0 0)" x="301.0426" y="189.95784" style="fill:#000000;font-family:'cmr10';" font-size="9.96264">0</text>
+		<text transform="matrix(1 0 0 1 0 0)" x="331.01495" y="189.95784" style="fill:#000000;font-family:'cmr10';" font-size="9.96264">0</text>
+		<text transform="matrix(1 0 0 1 0 0)" x="365.96866" y="189.95784" style="fill:#000000;font-family:'cmr10';" font-size="9.96264">1</text>
+		<text transform="matrix(1 0 0 1 0 0)" x="387.08533" y="146.12201" style="fill:#000000;font-family:'cmex10';" font-size="9.96264">3</text>
+		<text transform="matrix(1 0 0 1 0 0)" x="387.08533" y="163.65645" style="fill:#000000;font-family:'cmex10';" font-size="9.96264">7</text>
+		<text transform="matrix(1 0 0 1 0 0)" x="387.08533" y="169.6341" style="fill:#000000;font-family:'cmex10';" font-size="9.96264">7</text>
+		<text transform="matrix(1 0 0 1 0 0)" x="387.08533" y="176.01022" style="fill:#000000;font-family:'cmex10';" font-size="9.96264">5</text>
+		<text transform="matrix(1 0 0 1 0 0)" x="393.7271" y="172.12476" style="fill:#000000;font-family:'cmsy10';" font-size="9.96264">Æ</text>
+		<text transform="matrix(1 0 0 1 0 0)" x="398.70844" y="146.12201" style="fill:#000000;font-family:'cmex10';" font-size="9.96264">2</text>
+		<text transform="matrix(1 0 0 1 0 0)" x="398.70844" y="163.65645" style="fill:#000000;font-family:'cmex10';" font-size="9.96264">6</text>
+		<text transform="matrix(1 0 0 1 0 0)" x="398.70844" y="169.6341" style="fill:#000000;font-family:'cmex10';" font-size="9.96264">6</text>
+		<text transform="matrix(1 0 0 1 0 0)" x="398.70844" y="176.01022" style="fill:#000000;font-family:'cmex10';" font-size="9.96264">4</text>
+		<text transform="matrix(1 0 0 1 0 0)" x="405.35022" y="154.09233" style="fill:#000000;font-family:'cmsy10';" font-size="9.96264">«</text>
+		<text transform="matrix(1 0 0 1 0 0)" x="413.09897 419.78223" y="154.09233" style="fill:#000000;font-family:'cmmi10';" font-size="9.96264">SQ</text>
+		<text transform="matrix(1 0 0 1 0 0)" x="427.65823" y="154.09233" style="fill:#000000;font-family:'cmr10';" font-size="9.96264">3</text>
+		<text transform="matrix(1 0 0 1 0 0)" x="445.90164 453.73474" y="154.09233" style="fill:#000000;font-family:'cmmi10';" font-size="9.96264">CQ</text>
+		<text transform="matrix(1 0 0 1 0 0)" x="461.61078" y="154.09233" style="fill:#000000;font-family:'cmr10';" font-size="9.96264">3</text>
+		<text transform="matrix(1 0 0 1 0 0)" x="483.72855" y="154.09233" style="fill:#000000;font-family:'cmr10';" font-size="9.96264">0</text>
+		<text transform="matrix(1 0 0 1 0 0)" x="502.5469" y="154.09233" style="fill:#000000;font-family:'cmsy10';" font-size="9.96264">«</text>
+		<text transform="matrix(1 0 0 1 0 0)" x="510.29565" y="154.09233" style="fill:#000000;font-family:'cmr10';" font-size="9.96264">10</text>
+		<text transform="matrix(1 0 0 1 0 0)" x="520.2583 526.9415" y="154.09233" style="fill:#000000;font-family:'cmmi10';" font-size="9.96264">SQ</text>
+		<text transform="matrix(1 0 0 1 0 0)" x="534.81757" y="154.09233" style="fill:#000000;font-family:'cmr10';" font-size="9.96264">3</text>
+		<text transform="matrix(1 0 0 1 0 0)" x="408.64966 416.48276" y="166.0475" style="fill:#000000;font-family:'cmmi10';" font-size="9.96264">CQ</text>
+		<text transform="matrix(1 0 0 1 0 0)" x="424.3588" y="166.0475" style="fill:#000000;font-family:'cmr10';" font-size="9.96264">3</text>
+		<text transform="matrix(1 0 0 1 0 0)" x="442.6022" y="166.0475" style="fill:#000000;font-family:'cmsy10';" font-size="9.96264">«</text>
+		<text transform="matrix(1 0 0 1 0 0)" x="450.35095 457.0342" y="166.0475" style="fill:#000000;font-family:'cmmi10';" font-size="9.96264">SQ</text>
+		<text transform="matrix(1 0 0 1 0 0)" x="464.91022" y="166.0475" style="fill:#000000;font-family:'cmr10';" font-size="9.96264">3</text>
+		<text transform="matrix(1 0 0 1 0 0)" x="483.72855" y="166.0475" style="fill:#000000;font-family:'cmr10';" font-size="9.96264">0</text>
+		<text transform="matrix(1 0 0 1 0 0)" x="505.84634" y="166.0475" style="fill:#000000;font-family:'cmr10';" font-size="9.96264">10</text>
+		<text transform="matrix(1 0 0 1 0 0)" x="515.809 523.64215" y="166.0475" style="fill:#000000;font-family:'cmmi10';" font-size="9.96264">CQ</text>
+		<text transform="matrix(1 0 0 1 0 0)" x="531.5181" y="166.0475" style="fill:#000000;font-family:'cmr10';" font-size="9.96264">3</text>
+		<text transform="matrix(1 0 0 1 0 0)" x="416.5042" y="178.00267" style="fill:#000000;font-family:'cmr10';" font-size="9.96264">0</text>
+		<text transform="matrix(1 0 0 1 0 0)" x="453.7562" y="178.00267" style="fill:#000000;font-family:'cmr10';" font-size="9.96264">0</text>
+		<text transform="matrix(1 0 0 1 0 0)" x="479.8542" y="178.00267" style="fill:#000000;font-family:'cmsy10';" font-size="9.96264">«</text>
+		<text transform="matrix(1 0 0 1 0 0)" x="487.60294" y="178.00267" style="fill:#000000;font-family:'cmr10';" font-size="9.96264">1</text>
+		<text transform="matrix(1 0 0 1 0 0)" x="518.68225" y="178.00267" style="fill:#000000;font-family:'cmr10';" font-size="9.96264">0</text>
+		<text transform="matrix(1 0 0 1 0 0)" x="416.5042" y="189.95784" style="fill:#000000;font-family:'cmr10';" font-size="9.96264">0</text>
+		<text transform="matrix(1 0 0 1 0 0)" x="453.7562" y="189.95784" style="fill:#000000;font-family:'cmr10';" font-size="9.96264">0</text>
+		<text transform="matrix(1 0 0 1 0 0)" x="483.72855" y="189.95784" style="fill:#000000;font-family:'cmr10';" font-size="9.96264">0</text>
+		<text transform="matrix(1 0 0 1 0 0)" x="518.68225" y="189.95784" style="fill:#000000;font-family:'cmr10';" font-size="9.96264">1</text>
+		<text transform="matrix(1 0 0 1 0 0)" x="539.79895" y="146.12201" style="fill:#000000;font-family:'cmex10';" font-size="9.96264">3</text>
+		<text transform="matrix(1 0 0 1 0 0)" x="539.79895" y="163.65645" style="fill:#000000;font-family:'cmex10';" font-size="9.96264">7</text>
+		<text transform="matrix(1 0 0 1 0 0)" x="539.79895" y="169.6341" style="fill:#000000;font-family:'cmex10';" font-size="9.96264">7</text>
+		<text transform="matrix(1 0 0 1 0 0)" x="539.79895" y="176.01022" style="fill:#000000;font-family:'cmex10';" font-size="9.96264">5</text>
+		<text transform="matrix(1 0 0 1 0 0)" x="546.4407" y="172.12476" style="fill:#000000;font-family:'cmsy10';" font-size="9.96264">Æ</text>
+		<text transform="matrix(1 0 0 1 0 0)" x="551.42206" y="146.12201" style="fill:#000000;font-family:'cmex10';" font-size="9.96264">2</text>
+		<text transform="matrix(1 0 0 1 0 0)" x="551.42206" y="163.65645" style="fill:#000000;font-family:'cmex10';" font-size="9.96264">6</text>
+		<text transform="matrix(1 0 0 1 0 0)" x="551.42206" y="169.6341" style="fill:#000000;font-family:'cmex10';" font-size="9.96264">6</text>
+		<text transform="matrix(1 0 0 1 0 0)" x="551.42206" y="176.01022" style="fill:#000000;font-family:'cmex10';" font-size="9.96264">4</text>
+		<text transform="matrix(1 0 0 1 0 0)" x="558.06384" y="154.09233" style="fill:#000000;font-family:'cmsy10';" font-size="9.96264">«</text>
+		<text transform="matrix(1 0 0 1 0 0)" x="565.81256 572.4958" y="154.09233" style="fill:#000000;font-family:'cmmi10';" font-size="9.96264">SQ</text>
+		<text transform="matrix(1 0 0 1 0 0)" x="580.3718" y="154.09233" style="fill:#000000;font-family:'cmr10';" font-size="9.96264">4</text>
+		<text transform="matrix(1 0 0 1 0 0)" x="595.3158" y="154.09233" style="fill:#000000;font-family:'cmr10';" font-size="9.96264">0</text>
+		<text transform="matrix(1 0 0 1 0 0)" x="610.25977 618.0929" y="154.09233" style="fill:#000000;font-family:'cmmi10';" font-size="9.96264">CQ</text>
+		<text transform="matrix(1 0 0 1 0 0)" x="625.9689" y="154.09233" style="fill:#000000;font-family:'cmr10';" font-size="9.96264">4</text>
+		<text transform="matrix(1 0 0 1 0 0)" x="640.9129" y="154.09233" style="fill:#000000;font-family:'cmr10';" font-size="9.96264">0</text>
+		<text transform="matrix(1 0 0 1 0 0)" x="561.3633 569.1964" y="166.0475" style="fill:#000000;font-family:'cmmi10';" font-size="9.96264">CQ</text>
+		<text transform="matrix(1 0 0 1 0 0)" x="577.0724" y="166.0475" style="fill:#000000;font-family:'cmr10';" font-size="9.96264">4</text>
+		<text transform="matrix(1 0 0 1 0 0)" x="595.3158" y="166.0475" style="fill:#000000;font-family:'cmr10';" font-size="9.96264">0</text>
+		<text transform="matrix(1 0 0 1 0 0)" x="610.8347 617.51794" y="166.0475" style="fill:#000000;font-family:'cmmi10';" font-size="9.96264">SQ</text>
+		<text transform="matrix(1 0 0 1 0 0)" x="625.394" y="166.0475" style="fill:#000000;font-family:'cmr10';" font-size="9.96264">4</text>
+		<text transform="matrix(1 0 0 1 0 0)" x="640.9129" y="166.0475" style="fill:#000000;font-family:'cmr10';" font-size="9.96264">0</text>
+		<text transform="matrix(1 0 0 1 0 0)" x="569.21783" y="178.00267" style="fill:#000000;font-family:'cmr10';" font-size="9.96264">0</text>
+		<text transform="matrix(1 0 0 1 0 0)" x="595.3158" y="178.00267" style="fill:#000000;font-family:'cmr10';" font-size="9.96264">1</text>
+		<text transform="matrix(1 0 0 1 0 0)" x="618.1143" y="178.00267" style="fill:#000000;font-family:'cmr10';" font-size="9.96264">0</text>
+		<text transform="matrix(1 0 0 1 0 0)" x="640.9129" y="178.00267" style="fill:#000000;font-family:'cmr10';" font-size="9.96264">0</text>
+		<text transform="matrix(1 0 0 1 0 0)" x="569.21783" y="189.95784" style="fill:#000000;font-family:'cmr10';" font-size="9.96264">0</text>
+		<text transform="matrix(1 0 0 1 0 0)" x="595.3158" y="189.95784" style="fill:#000000;font-family:'cmr10';" font-size="9.96264">0</text>
+		<text transform="matrix(1 0 0 1 0 0)" x="618.1143" y="189.95784" style="fill:#000000;font-family:'cmr10';" font-size="9.96264">0</text>
+		<text transform="matrix(1 0 0 1 0 0)" x="640.9129" y="189.95784" style="fill:#000000;font-family:'cmr10';" font-size="9.96264">1</text>
+		<text transform="matrix(1 0 0 1 0 0)" x="645.8942" y="146.12201" style="fill:#000000;font-family:'cmex10';" font-size="9.96264">3</text>
+		<text transform="matrix(1 0 0 1 0 0)" x="645.8942" y="163.65645" style="fill:#000000;font-family:'cmex10';" font-size="9.96264">7</text>
+		<text transform="matrix(1 0 0 1 0 0)" x="645.8942" y="169.6341" style="fill:#000000;font-family:'cmex10';" font-size="9.96264">7</text>
+		<text transform="matrix(1 0 0 1 0 0)" x="645.8942" y="176.01022" style="fill:#000000;font-family:'cmex10';" font-size="9.96264">5</text>
+		<text transform="matrix(1 0 0 1 0 0)" x="652.536" y="172.12476" style="fill:#000000;font-family:'cmsy10';" font-size="9.96264">Æ</text>
+		<text transform="matrix(1 0 0 1 0 0)" x="657.51733" y="146.12201" style="fill:#000000;font-family:'cmex10';" font-size="9.96264">2</text>
+		<text transform="matrix(1 0 0 1 0 0)" x="657.51733" y="163.65645" style="fill:#000000;font-family:'cmex10';" font-size="9.96264">6</text>
+		<text transform="matrix(1 0 0 1 0 0)" x="657.51733" y="169.6341" style="fill:#000000;font-family:'cmex10';" font-size="9.96264">6</text>
+		<text transform="matrix(1 0 0 1 0 0)" x="657.51733" y="176.01022" style="fill:#000000;font-family:'cmex10';" font-size="9.96264">4</text>
+		<text transform="matrix(1 0 0 1 0 0)" x="664.1591 671.99225" y="154.09233" style="fill:#000000;font-family:'cmmi10';" font-size="9.96264">CQ</text>
+		<text transform="matrix(1 0 0 1 0 0)" x="679.8682" y="154.09233" style="fill:#000000;font-family:'cmr10';" font-size="9.96264">5</text>
+		<text transform="matrix(1 0 0 1 0 0)" x="694.8122" y="154.09233" style="fill:#000000;font-family:'cmsy10';" font-size="9.96264">«</text>
+		<text transform="matrix(1 0 0 1 0 0)" x="702.561 709.2442" y="154.09233" style="fill:#000000;font-family:'cmmi10';" font-size="9.96264">SQ</text>
+		<text transform="matrix(1 0 0 1 0 0)" x="717.12024" y="154.09233" style="fill:#000000;font-family:'cmr10';" font-size="9.96264">5</text>
+		<text transform="matrix(1 0 0 1 0 0)" x="732.0642" y="154.09233" style="fill:#000000;font-family:'cmr10';" font-size="9.96264">0</text>
+		<text transform="matrix(1 0 0 1 0 0)" x="747.0082" y="154.09233" style="fill:#000000;font-family:'cmr10';" font-size="9.96264">0</text>
+		<text transform="matrix(1 0 0 1 0 0)" x="664.734 671.41724" y="166.0475" style="fill:#000000;font-family:'cmmi10';" font-size="9.96264">SQ</text>
+		<text transform="matrix(1 0 0 1 0 0)" x="679.2933" y="166.0475" style="fill:#000000;font-family:'cmr10';" font-size="9.96264">5</text>
+		<text transform="matrix(1 0 0 1 0 0)" x="698.11163 705.94476" y="166.0475" style="fill:#000000;font-family:'cmmi10';" font-size="9.96264">CQ</text>
+		<text transform="matrix(1 0 0 1 0 0)" x="713.8208" y="166.0475" style="fill:#000000;font-family:'cmr10';" font-size="9.96264">5</text>
+		<text transform="matrix(1 0 0 1 0 0)" x="732.0642" y="166.0475" style="fill:#000000;font-family:'cmr10';" font-size="9.96264">0</text>
+		<text transform="matrix(1 0 0 1 0 0)" x="747.0082" y="166.0475" style="fill:#000000;font-family:'cmr10';" font-size="9.96264">0</text>
+		<text transform="matrix(1 0 0 1 0 0)" x="672.0137" y="178.00267" style="fill:#000000;font-family:'cmr10';" font-size="9.96264">0</text>
+		<text transform="matrix(1 0 0 1 0 0)" x="705.9662" y="178.00267" style="fill:#000000;font-family:'cmr10';" font-size="9.96264">0</text>
+		<text transform="matrix(1 0 0 1 0 0)" x="732.0642" y="178.00267" style="fill:#000000;font-family:'cmr10';" font-size="9.96264">1</text>
+		<text transform="matrix(1 0 0 1 0 0)" x="747.0082" y="178.00267" style="fill:#000000;font-family:'cmr10';" font-size="9.96264">6</text>
+		<text transform="matrix(1 0 0 1 0 0)" x="672.0137" y="189.95784" style="fill:#000000;font-family:'cmr10';" font-size="9.96264">0</text>
+		<text transform="matrix(1 0 0 1 0 0)" x="705.9662" y="189.95784" style="fill:#000000;font-family:'cmr10';" font-size="9.96264">0</text>
+		<text transform="matrix(1 0 0 1 0 0)" x="732.0642" y="189.95784" style="fill:#000000;font-family:'cmr10';" font-size="9.96264">0</text>
+		<text transform="matrix(1 0 0 1 0 0)" x="747.0082" y="189.95784" style="fill:#000000;font-family:'cmr10';" font-size="9.96264">1</text>
+		<text transform="matrix(1 0 0 1 0 0)" x="751.9895" y="146.12201" style="fill:#000000;font-family:'cmex10';" font-size="9.96264">3</text>
+		<text transform="matrix(1 0 0 1 0 0)" x="751.9895" y="163.65645" style="fill:#000000;font-family:'cmex10';" font-size="9.96264">7</text>
+		<text transform="matrix(1 0 0 1 0 0)" x="751.9895" y="169.6341" style="fill:#000000;font-family:'cmex10';" font-size="9.96264">7</text>
+		<text transform="matrix(1 0 0 1 0 0)" x="751.9895" y="176.01022" style="fill:#000000;font-family:'cmex10';" font-size="9.96264">5</text>
+	</g>
+</g>
+</svg>
